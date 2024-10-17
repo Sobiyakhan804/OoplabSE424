@@ -1,0 +1,35 @@
+           #include<iostream>
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    string jobTitle;
+    double salary;
+
+public:
+    Employee(string empName, std::string empJobTitle, double empSalary) {
+        name = empName;
+        jobTitle = empJobTitle;
+        salary = empSalary;
+    }
+    void updateSalary(double newSalary) {
+        salary = newSalary;
+    }
+    void displayDetails() {
+        cout << "Name: " << name <<endl;
+        cout << "Job Title: " << jobTitle <<endl;
+        cout << "Salary: " << salary <<endl;
+    }
+};
+
+int main() {
+    Employee emp1("Ali ", "Manager", 60000);
+   cout << "Employee Details before salary update:" << endl;
+    emp1.displayDetails();
+    emp1.updateSalary(65000);
+    cout << "\nEmployee Details after salary update:" <<endl;
+    emp1.displayDetails();
+
+    return 0;
+}
