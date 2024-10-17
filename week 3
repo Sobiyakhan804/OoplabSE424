@@ -1,0 +1,117 @@
+task 1:
+package colors;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Colors {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+  
+        String[] colors = {"Red", "Green", "Blue", "Yellow", "Orange"};
+
+       
+        for (int i = 0; i < colors.length; i++) {
+            System.out.println(colors[i]);
+        }
+    }
+}
+task2:
+package oddevencheck;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Oddevencheck {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int num=4;
+        if(num%2==0){
+            System.out.println("The number is even");
+        }
+        else
+            if(num%2!=0){
+                System.out.println("The number is odd");
+                    
+                    }
+      
+    }
+    
+}
+task3:
+package printevennumbers;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Printevennumbers {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int num = 1; 
+        while (num <= 20) { 
+            if (num % 2 == 0) { 
+                System.out.println(num);
+            }
+            num++; 
+        }
+    }
+}
+task4:
+package printtriangle;
+
+/**
+ *
+ * @author Riphah
+ */
+public class PrintTriangle {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int rows = 5; 
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) { 
+                System.out.print("* "); 
+            }
+            System.out.println(); 
+        }
+    }
+}
+task5:
+package multiplicationtable;
+
+/**
+ *
+ * @author Riphah
+ */
+public class MultiplicationTable {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) { 
+            for (int j = 1; j <= 5; j++) { 
+                System.out.print(i * j + "\t"); 
+            }
+            System.out.println(); 
+        }
+        
+    }
+    
+}
