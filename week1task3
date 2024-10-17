@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+class Laptop {
+private:
+    std::string attributes[8][2] = {
+        {"Brand", ""},
+        {"Model", ""},
+        {"Serial", ""},
+        {"Color", ""},
+        {"Price", ""},
+        {"Processor Speed", ""},
+        {"RAM", ""},
+        {"Screen Size", ""}
+    };
+
+public:
+    // Set individual attributes
+    void setAttribute(std::string name, std::string value) {
+        for (int i = 0; i < 8; i++) {
+            if (attributes[i][0] == name) {
+                attributes[i][1] = value;
+                return;
+            }
+        }
+    }
