@@ -1,0 +1,133 @@
+task1:
+package laptop;
+import java.util.Scanner;
+/**
+ *
+ * @author Riphah
+ */
+public class Laptop {
+    private String brand;
+
+ 
+    public Laptop(String brand) {
+        this.brand = brand;
+    }
+
+  
+    public void displayBrand() {
+        System.out.println("Laptop Brand: " + brand);
+    }
+
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter laptop brand: ");
+        String brand = scanner.nextLine();
+
+       
+        Laptop laptop = new Laptop(brand);
+
+      
+        laptop.displayBrand();
+    }
+}
+task2:
+package printname;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Printname {
+
+    /**
+     * @param args the command line arguments
+     */
+  
+        public static void main(String[] args) {
+        printS();
+        printO();
+        printB();
+        printI();
+        printA();
+    }
+        public static void printS(){
+
+    int rows = 7; // Number of rows
+        int columns = 5; // Number of columns
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if ((i == 0 || i == rows / 2 || i == rows - 1) && j != 0 && j != columns - 1) {
+                    System.out.print("* ");
+                } else if (j == 0 && i != 0 && i < rows / 2) {
+                    System.out.print("* ");
+                } else if (j == columns - 1 && i > rows / 2 && i != rows - 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printO() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == 0 || i == 4 || j == 0 && i != 0 && i != 4 || j == 4 && i != 0 && i != 4) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printB() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == 0 || i == 2 || i == 4 || j == 0 && i != 2 || j == 4 && i != 2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printI() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (j == 2 || (i == 0 || i == 4) && j != 2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void printA() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i == 0 || i == 3 || j == 0 && i != 0 && i != 3 || j == 4 && i != 0 && i != 3) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+}
+
