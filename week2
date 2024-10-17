@@ -1,0 +1,67 @@
+task1:
+public class Student {
+ String name;
+ String city;
+ int age;
+ public static void main(String[] args) {
+ Student s1= new Student();
+ Student s2= new Student();
+ s1.name="Nayyab";
+ s2.city="Rawalpindi";
+ s1.age=20;
+
+ System.out.println(s1.name);
+ System.out.println(s2.city);
+ System.out.println(s1.age);
+ // TODO code application logic here
+ }
+}
+task2:
+public class Area {
+int length;
+int width;
+ public static void main(String[] args) {
+ Area a1= new Area();
+ a1.length=20;
+ a1.width=50;
+ System.out.println(a1.length*a1.width);
+ }
+}
+task3:
+public class Computer {
+String name;
+String config;
+int cost;
+String io;
+ public static void main(String[] args) {
+ Computer c1= new Computer();
+ c1.name="Apple";
+ c1.config="i5";
+ c1.cost=50000;
+ c1.io="IOS";
+ System.out.println("The company name is "+ c1.name);
+ System.out.println("The configuration is "+ c1.config);
+ System.out.println("Its cost is "+ c1.cost);
+ System.out.println("Its Operating system is "+ c1.io);
+ }
+}
+task4:
+public class Maximum {
+int num1;
+int num2;
+int num3;
+ public static void main(String[] args) {
+ Maximum m1= new Maximum();
+ m1.num1=20;
+ m1.num2=30;
+ m1.num3= 40;
+ if(m1.num1>m1.num2 && m1.num1>m1.num3){
+ System.out.println("The greatest number is:"+m1.num1);}
+ else if(m1.num2>m1.num1 && m1.num2>m1.num3){
+ System.out.println("The greatest number is:"+m1.num2);}
+ else{
+ System.out.println("The greatest number is:"+m1.num3);
+ }
+
+ }
+}
