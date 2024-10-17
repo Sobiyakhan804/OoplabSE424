@@ -1,0 +1,133 @@
+           #include<iostream>
+using namespace std;
+
+class Employee {
+private:
+    string name;
+    string jobTitle;
+    double salary;
+
+public:
+    Employee(string empName, std::string empJobTitle, double empSalary) {
+        name = empName;
+        jobTitle = empJobTitle;
+        salary = empSalary;
+    }
+    void updateSalary(double newSalary) {
+        salary = newSalary;
+    }
+    void displayDetails() {
+        cout << "Name: " << name <<endl;
+        cout << "Job Title: " << jobTitle <<endl;
+        cout << "Salary: " << salary <<endl;
+    }
+};
+
+int main() {
+    Employee emp1("Ali ", "Manager", 60000);
+   cout << "Employee Details before salary update:" << endl;
+    emp1.displayDetails();
+    emp1.updateSalary(65000);
+    cout << "\nEmployee Details after salary update:" <<endl;
+    emp1.displayDetails();
+
+    return 0;
+}
+task 2:
+#include <iostream>
+using namespace std;
+
+class Car {
+private:
+    string name;
+    float topSpeed;
+    int modelName;
+
+public:
+    
+    Car(string Name, float TopSpeed, int ModelName) {
+        name = Name;
+        topSpeed = TopSpeed;
+        modelName = ModelName;
+    }
+
+    
+    void display() {
+        cout << "the name of car is" << name << endl;
+        cout << "speed of the car is " << topSpeed  << endl;
+        cout << "model of the car is " << modelName << endl;
+    }
+};
+
+int main() {
+   
+    Car c("Ferrari", 459.00, 2025);
+
+    
+    c.display();
+
+    return 0;
+}
+task 3:
+#include <iostream>
+#include <string>
+
+class Laptop {
+private:
+    std::string attributes[8][2] = {
+        {"Brand", ""},
+        {"Model", ""},
+        {"Serial", ""},
+        {"Color", ""},
+        {"Price", ""},
+        {"Processor Speed", ""},
+        {"RAM", ""},
+        {"Screen Size", ""}
+    };
+
+public:
+    // Set individual attributes
+    void setAttribute(std::string name, std::string value) {
+        for (int i = 0; i < 8; i++) {
+            if (attributes[i][0] == name) {
+                attributes[i][1] = value;
+                return;
+            }
+        }
+    }
+
+    // Upgrade RAM
+    void upgradeRAM(std::string additionalRAM) {
+        attributes[6][1] = std::to_string(std::stoi(attributes[6][1]) + std::stoi(additionalRAM));
+    }
+
+    // Display all attributes
+    void displayAttributes() {
+        for (int i = 0; i < 8; i++) {
+            std::cout << attributes[i][0] << ": " << attributes[i][1] << std::endl;
+        }
+    }
+};
+
+int main() {
+    Laptop laptop;
+    laptop.setAttribute("Brand", "Apple");
+    laptop.setAttribute("Model", "MacBook");
+    laptop.setAttribute("Serial", "ABC123");
+    laptop.setAttribute("Color", "Silver");
+    laptop.setAttribute("Price", "1200.0");
+    laptop.setAttribute("Processor Speed", "2.5");
+    laptop.setAttribute("RAM", "8");
+    laptop.setAttribute("Screen Size", "15.6");
+
+    std::cout << "Before upgrading RAM:" << std::endl;
+    laptop.displayAttributes();
+
+    laptop.upgradeRAM("4");
+
+    std::cout << "After upgrading RAM:" << std::endl;
+    laptop.displayAttributes();
+
+    return 0;
+}
+
